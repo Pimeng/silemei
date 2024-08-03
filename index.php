@@ -8,7 +8,7 @@ Made by Pimeng
 <html>
     <head>
         <title>皮梦睡似了吗？</title>
-        <link rel="icon" href="https://q1.qlogo.cn/g?b=qq&nk=1470458485&s=640">
+        <link rel="icon" href="https://q1.qlogo.cn/g?b=qq&nk=&s=640"><!-- 这里的nk=可以填上你的QQ号来自动获取QQ头像 -->
         <style>
         html {
             font-size: 25px;
