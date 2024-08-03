@@ -1,12 +1,9 @@
 # Silemei
 
-访问量
 ![访问量](https://count.kjchmc.cn/get/@pimeng?theme=rule34)
 
 #### 介绍
 使用php编写的一个查看有没有睡似的网页
-
-api.php可以返回status结果
 
 #### 安装教程
 
