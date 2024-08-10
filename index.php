@@ -7,8 +7,8 @@ Made by Pimeng
 
 <html>
     <head>
-        <title>皮梦睡似了吗？</title>
-        <link rel="icon" href="https://q1.qlogo.cn/g?b=qq&nk=&s=640"><!-- 这里的nk=可以填上你的QQ号来自动获取QQ头像 -->
+        <title>睡似了吗？</title>
+        <link rel="icon" href="https://q1.qlogo.cn/g?b=qq&nk=QQ号&s=640"><!-- 这里的nk=可以填上你的QQ号来自动获取QQ头像 -->
         <style>
         html {
             font-size: 25px;
@@ -58,11 +58,11 @@ Made by Pimeng
         
 print <<<EOF
         <div class="card">
-        <a style="font-size: 2em;">皮梦睡<ruby>似<rt>sǐ</rt></ruby>了吗？</a>
+        <a style="font-size: 2em;">??睡<ruby>似<rt>sǐ</rt></ruby>了吗？</a>
         
         <div style="height: 20px;"></div>
 
-        <a>皮梦当前应该是：<br><a id="status" style="font-size: 1.2em;"> $status_value </a></a>    
+        <a>??当前应该是：<br><a id="status" style="font-size: 1.2em;"> $status_value </a></a>    
         <br>
         <a id="additional-info" style="font-size: 1em;"></a>
         
@@ -71,7 +71,7 @@ print <<<EOF
         
         <a>在任何情况下，电话都是最容易快速得到回答的通讯方式。</a>
         <div style="height: 10px;"></div>
-        <a>通过这个页面，你可以知晓皮梦当前的状态。
+        <a>通过这个页面，你可以知晓??当前的状态。
             <br>
         </a>
     </div>

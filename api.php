@@ -43,6 +43,7 @@ if ($goc == 'change'){
             //先删除原先存在的数据，防止数据过多
             mysqli_query($con,"DELETE FROM web_data WHERE status='醒着'");
             mysqli_query($con,"DELETE FROM web_data WHERE status='着了'");
+            mysqli_query($con,"DELETE FROM web_data WHERE status='未知'");
             $sql = "INSERT INTO web_data (status) VALUES ('着了')";
             if (mysqli_query($con, $sql)) {
                 echo "已切换至：着了";
@@ -53,9 +54,21 @@ if ($goc == 'change'){
             //先删除原先存在的数据，防止数据过多
             mysqli_query($con,"DELETE FROM web_data WHERE status='着了'");
             mysqli_query($con,"DELETE FROM web_data WHERE status='醒着'");
+            mysqli_query($con,"DELETE FROM web_data WHERE status='未知'");
             $sql = "INSERT INTO web_data (status) VALUES ('醒着')";
             if (mysqli_query($con, $sql)) {
                 echo "已切换至：醒着";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($con);
+            }
+        } else if ($status == '未知') {
+            //先删除原先存在的数据，防止数据过多
+            mysqli_query($con,"DELETE FROM web_data WHERE status='着了'");
+            mysqli_query($con,"DELETE FROM web_data WHERE status='醒着'");
+            mysqli_query($con,"DELETE FROM web_data WHERE status='未知'");
+            $sql = "INSERT INTO web_data (status) VALUES ('未知')";
+            if (mysqli_query($con, $sql)) {
+                echo "已切换至：未知";
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($con);
             }
