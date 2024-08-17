@@ -62,7 +62,7 @@ if ($goc == 'change'){
             mysqli_query($con,"DELETE FROM $name WHERE status='0'");
             mysqli_query($con,"DELETE FROM $name WHERE status='1'");
             mysqli_query($con,"DELETE FROM $name WHERE status='2'");
-            $sql = "INSERT INTO $name (status) VALUES ('醒着')";
+            $sql = "INSERT INTO $name (status) VALUES ('1')";
             if (mysqli_query($con, $sql)) {
                 echo "已切换至：醒着";
             } else {
@@ -73,7 +73,7 @@ if ($goc == 'change'){
             mysqli_query($con,"DELETE FROM $name WHERE status='着了'");
             mysqli_query($con,"DELETE FROM $name WHERE status='醒着'");
             mysqli_query($con,"DELETE FROM $name WHERE status='未知'");
-            $sql = "INSERT INTO $name (status) VALUES ('未知')";
+            $sql = "INSERT INTO $name (status) VALUES ('2')";
             if (mysqli_query($con, $sql)) {
                 echo "已切换至：未知";
             } else {
