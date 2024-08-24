@@ -2,25 +2,25 @@
 /*
 
 Made by Pimeng
-2024-08-03
+2024-08-24
 请遵循Apache-2.0开源协议
 
 */
 
 /*
+
 这个文件可作为api使用
 链接后面跟上
-?key=密钥&status=状态&goc=获取还是修改
+?key=密钥&status=状态&goc=获取还是修改&name=名字（适用于多人情景）
+
 */
-
-
 
 //开始创建数据库连接
 //定义用户名、密码和数据库
-$access = "密钥核对正确";
-$servername = "localhost";
-$username = "";
-$password = "";
+$servername = "localhost";// 数据库地址
+$username = "";// 数据库用户名
+$password = "";// 数据库密码
+$dbname = "",// 数据库名
 
 // 检查 URL 参数是否存在
 if(isset($_GET['key']) && isset($_GET['status']) && isset($_GET['goc']) && isset($_GET['name'])){
@@ -32,10 +32,8 @@ if(isset($_GET['key']) && isset($_GET['status']) && isset($_GET['goc']) && isset
     echo "缺少参数";
 }
 
-//将传入参数给到变量
-$dbname = $name;
 // 创建连接
-$con = mysqli_connect($servername, $username, $password, "silemei_yedao");
+$con = mysqli_connect($servername, $username, $password, $dbname);
 // 检测连接
 if (!$con) {
     die("连接错误: " . mysqli_connect_error());
@@ -44,6 +42,7 @@ if (!$con) {
 // 核对URL传入密钥
 if ($goc == 'change'){
     if($key == ''){//在这里定义你的密钥，可以是任意字符
+        $access = "密钥核对正确";
         // 写入数据库状态
         // 这里的代码还有优化的空间，但是我不会（
         if ($status == '0'){
@@ -91,7 +90,6 @@ EOT;
 }} else if ( $goc == 'get'){//此处直接返回状态
     $sql = "SELECT status FROM $name"; 
     $result = $con->query($sql);
-
     // 检查查询结果  
     if ($result->num_rows > 0) {  
         // 输出查询到的数据  

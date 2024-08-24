@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <!-- 强制UTF-8编码 -->
+        <meta charset="UTF-8">
+        <title>睡似了吗？</title>
+        <link rel="icon" href="//q1.qlogo.cn/g?b=qq&nk=QQ号&s=640">
+        <style>
+        html {
+            font-size: 25px;
+        }
+        rt {
+            font-size: 0.6em;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            background: url('//www.loliapi.com/acg/') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .sleeping {
+        color: gray;
+        }
+        .awake {
+        color: rgb(16, 128, 0);
+        }
+        .error {
+        color: red;
+        }
+        .unknow {
+            color: grey;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+        <a style="font-size: 2em;">睡<ruby>似<rt>sǐ</rt></ruby>了吗？</a>
+        <div style="height: 20px;"></div>
+        <a>皮梦当前应该是：<br><a id="status" style="font-size: 1.2em;">正在加载哦</a></a>
+        <br>
+        <a id="additional-info" style="font-size: 1em;"></a>
+        <div style="height: 50px;"></div>
+        <a>在任何情况下，电话都是最容易快速得到回答的通讯方式。</a>
+        <div style="height: 10px;"></div>
+        <a>通过这个页面，你可以知晓皮梦当前的状态。
+        <br>
+        </a>
+    </div>
+
+    <script src="query.js"></script>
+    </body>
+</html>
+
+
