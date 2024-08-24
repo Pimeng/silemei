@@ -8,6 +8,7 @@
 
 ### Demo
 [https://silemei.pimeng.icu](https://silemei.pimeng.icu)
+![图片示例](img/demo.png)
 
 ### 安装教程
 
