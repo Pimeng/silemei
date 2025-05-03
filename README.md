@@ -1,5 +1,8 @@
 # Silemei
 
+> 本项目作者更新不是很积极，如有需要，欢迎联系作者[pimeng@pimeng.icu](mailto:pimeng@pimeng.icu)
+
+
 ### 访问量
 ![访问量](https://count.kjchmc.cn/get/@pimeng?theme=rule34)
 
